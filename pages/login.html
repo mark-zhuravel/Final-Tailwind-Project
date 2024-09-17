@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,500&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            'md' : '768px',
+            'lg': '1366px',
+          },
+          fontFamily: {
+            'poppins' : ['Poppins', 'sans-serif'],
+            'cormorant' : ['Cormorant Garamond', 'serif'],
+          },
+          fontSize: {
+            '8.5' : '34px',
+          },
+          extend: {
+            colors: {
+              'brown' : '#A87B62',
+              'dark' : '#1D1613',
+              'light' : '#F0EAE4',
+              'gray' : '#9B9997',
+              'search' : 'rgba(255, 255, 255, 0.15)',
+              'nav' : 'rgba(255, 255, 255, 0.75)',
+              'wrap' : 'rgba(86, 64, 52, 0.70)',
+              'form' : '#F0EAE4',
+            },
+            backgroundImage: {
+              'perfection' : "url('../img/perfection.png')",
+              'catalog': "url('../img/catalog.png')",
+              'login' : "url('../img/login.jpg')",
+            },
+            spacing: {
+              '9/10' : '90%',
+              '7.5' : '30px',
+              '11.25' : '45px',
+              '6.25' : '25px',
+              '5.5' : '22px',
+              '50' : '200px',
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-poppins">
+    <main class="my-[50px] w-[84%] mx-auto md:my-20 md:w-[58%] lg:w-[31%]">
+        <div class="bg-login bg-center bg-cover min-w-full  min-h-[84px] h-auto relative md:min-h-[138px]">
+            <button type="reset" class="block absolute top-[15px] right-[15px] md:top-5 md:right-5 md:w-5 md:h-5 lg:w-3.5 lg:h-3.5">
+                <svg class="md:w-5 md:h-5 lg:w-3.5 lg:h-3.5" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M7 5.44469L12.4447 0L14 1.55531L8.55531 7L14 12.4447L12.4447 14L7 8.55531L1.55531 14L0 12.4447L5.44469 7L0 1.55531L1.55531 0L7 5.44469Z" fill="#1D1613"/>
+                </svg>
+            </button>
+        </div>
+        <div class="bg-form w-full px-[15px] md:px-[51px] lg:px-11.25">
+          <h1 class="text-dark text-center font-cormorant text-[24px] font-bold pt-11.25 pb-10 leading-5 md:pt-[60px] md:pb-[50px] md:text-[34px] lg:pb-11.25">Log in</h1>
+          <form action="#">
+            <input placeholder="Your E-mail" class="border-b border-dark pb-[15px] w-full placeholder:text-gray text-dark  placeholder:text-[14px] text-[14px] placeholder:font-medium font-medium placeholder:leading-4 leading-4 bg-transparent outline-0 mb-[35px]" type="text">
+            <input placeholder="Password" class="border-b border-dark pb-[15px] w-full placeholder:text-gray text-dark  placeholder:text-[14px] text-[14px] placeholder:font-medium font-medium placeholder:leading-4 leading-4 bg-transparent outline-0" type="text">
+          </form>
+          <a href="#" class="block pt-2.5 pb-10 text-gray relative text-right text-[12px] leading-3 md:pb-[50px]">Forgot your password?</a>
+          <button class="text-white font-medium py-7 w-full leading-4 bg-brown mb-5" type="submit">Log In</button>
+          <div class="md:text-center"><a href="#" class="inline-block pb-11.25 text-[14px] text-gray font-medium leading-3 md:pb-[60px]">Don’t have an account? <span><a class="text-dark leading-3 text-[14px] font-medium" href="#">   Sign Up</a></span></a></div>
+        </div>
+    </main>
+</body>
+</html>
